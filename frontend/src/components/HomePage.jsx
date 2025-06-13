@@ -14,7 +14,7 @@ const HomePage = () => {
   const handleSubmit = async (e) => {
     try {
       e.preventDefault();
-      const response = await axios.post("http://localhost:3000/api/shorturl/url", {
+      const response = await axios.post("https://url-shortner-zc4s.onrender.com/api/shorturl/url", {
         url
       }, {
         withCredentials: true
@@ -66,7 +66,7 @@ const HomePage = () => {
           rel="noopener noreferrer"
           className="text-blue-600 font-medium underline"
         >
-          http://localhost:3000/s/{shortId}
+         https://url-shortner-zc4s.onrender.com/s/{shortId}
         </a>
       </div>
     )}
