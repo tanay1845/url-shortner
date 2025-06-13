@@ -60,12 +60,12 @@ const History = () => {
               </td>
               <td className="px-4 sm:px-6 py-4 break-all">
                 <a
-                  href={`http://localhost:3000/${url.shortId}`}
+                  href={`https://url-shortner-zc4s.onrender.com/s/${url.shortId}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-600 hover:underline"
                 >
-                  http://localhost:3000/s/{url.shortId}
+                  https://url-shortner-zc4s.onrender.com/s/{url.shortId}
                 </a>
               </td>
               <td className="px-4 sm:px-6 py-4 text-center font-semibold text-indigo-700">
