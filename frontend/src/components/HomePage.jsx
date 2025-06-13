@@ -61,7 +61,7 @@ const HomePage = () => {
     {shortId && (
       <div className="bg-amber-100 px-4 py-3 rounded-md text-center break-all border-l-4 border-amber-500 shadow-sm">
         <a
-          href={`http://localhost:3000/s/${shortId}`}
+          href={`https://url-shortner-zc4s.onrender.com/s/${shortId}`}
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-600 font-medium underline"

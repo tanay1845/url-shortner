@@ -12,7 +12,7 @@ const Profile = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.get("http://localhost:3000/api/shorturl/logout", {
+      await axios.get("https://url-shortner-zc4s.onrender.com/api/shorturl/logout", {
         withCredentials: true,
       });
       setUser(null); // clear user state on frontend
@@ -26,7 +26,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/user/profile", {
+        const res = await axios.get("https://url-shortner-zc4s.onrender.com/user/profile", {
           withCredentials: true,
         });
         setUser(res.data.user);

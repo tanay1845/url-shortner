@@ -9,7 +9,7 @@ const Navbar = () => {
  
     const fetchCurrentUser = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/api/shorturl/current", {
+        const res = await axios.get("https://url-shortner-zc4s.onrender.com/api/shorturl/current", {
           withCredentials: true, 
         });
         setUser(res.data.user); 

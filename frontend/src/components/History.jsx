@@ -12,7 +12,7 @@ const History = () => {
   useEffect(() => {
     const fetchUrl = async () => {
       try {
-        await axios.get("http://localhost:3000/api/shorturl", { withCredentials: true })
+        await axios.get("https://url-shortner-zc4s.onrender.com/api/shorturl", { withCredentials: true })
           .then((res) => {
             setData(res.data.urls)
             // console.log(res.data.urls)
