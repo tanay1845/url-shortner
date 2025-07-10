@@ -242,6 +242,37 @@ const getUserUrls = async (req, res) => {
     }
 }
 
+const editUser = async(req,res) => {
+  try {
+    const { name } = req.body;
+    const userId =req.user._id;
+
+    if(!userId){
+      return res.status(400).json({message:"User Id not found"})
+    }
+    
+    const user = await User.findByIdAndUpdate(
+      userId,
+      { name },
+      {
+        new:true,runValidators: true
+      }
+    );
+
+    return res.status(200).json({
+      message:"User updated successfully.",
+      success:true,
+      user
+    })
+
+  } catch (error) {
+    return res.status(500).json({
+      message:"User not updated Internal error",
+      success:false
+    })
+  }
+}
+
 export { 
   generateShortUrl, 
   routeToShortID, 
@@ -250,5 +281,6 @@ export {
   signupUser, 
   logoutUser, 
   getUserProfile,
-  getCurrentUser
+  getCurrentUser,
+  editUser
 }

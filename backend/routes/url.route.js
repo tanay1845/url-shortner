@@ -1,5 +1,5 @@
 import express from "express";
-import { generateShortUrl, getUserUrls, getCurrentUser, getUserProfile, loginUser, logoutUser, routeToShortID, signupUser } from "../controllers/url.controller.js";
+import { generateShortUrl, getUserUrls, getCurrentUser, getUserProfile, loginUser, logoutUser, routeToShortID, signupUser, editUser } from "../controllers/url.controller.js";
 import { authMiddleware } from "../middleware/auth.midleware.js";
 
 
@@ -18,6 +18,8 @@ router.get("/current",authMiddleware,getCurrentUser)
 router.get("/",authMiddleware,getUserUrls)
 
 router.get("/logout",logoutUser)
+
+router.put("/edituser",authMiddleware,editUser)
 
 
 export default router

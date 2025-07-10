@@ -45,6 +45,9 @@ const Navbar = () => {
       </>
     ) : (
       <div className="flex items-center gap-4">
+        <Link to="/about">
+              <p className="text-white font-semibold text-xl mr-10 hover:bg-violet-700 px-3 py-1 rounded-full text-center ">About</p>
+            </Link>
         <p className="text-white hidden md:block text-lg">Hi, {user.name}</p>
         <Link to="/profile">
           <button className="bg-white text-indigo-700 font-bold cursor-pointer text-2xl w-10 h-10 flex items-center justify-center rounded-full duration-200 hover:scale-105">
