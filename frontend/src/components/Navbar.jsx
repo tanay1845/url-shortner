@@ -18,7 +18,7 @@ const Navbar = () => {
       }
     };
 
-    fetchCurrentUser();
+    // fetchCurrentUser();
   
 
   useEffect(() => {
