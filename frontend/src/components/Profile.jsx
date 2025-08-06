@@ -60,7 +60,7 @@ const Profile = () => {
       }
     };
 
-    fetchProfile();
+    // fetchProfile();
   }, [location, handleEdit]);
 
   if (error) return <p className="text-red-500 p-4">{error}</p>;
