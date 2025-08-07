@@ -15,7 +15,7 @@ const Profile = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.get("https://url-shortner-zc4s.onrender.com/api/shorturl/logout", {
+      await axios.get("http://localhost:5173/api/shorturl/logout", {
         withCredentials: true,
       });
       setUser(null); // clear user state on frontend
@@ -33,7 +33,7 @@ const Profile = () => {
         return toast.error("Enter name")
       }
 
-      await axios.put("https://url-shortner-zc4s.onrender.com/api/shorturl/edituser", {
+      await axios.put("http://localhost:5173/api/shorturl/edituser", {
         name,
       }, {
         withCredentials: true
@@ -50,7 +50,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const res = await axios.get("https://url-shortner-zc4s.onrender.com/api/shorturl/user/profile", {
+        const res = await axios.get("http://localhost:5173/api/shorturl/user/profile", {
           withCredentials: true,
         });
         setUser(res.data.user);

@@ -11,7 +11,7 @@ const Navbar = () => {
   useEffect(() => {
     const fetchCurrentUser = async () => {
       try {
-        const res = await axios.get("https://url-shortner-zc4s.onrender.com/api/shorturl/current", {
+        const res = await axios.get("http://localhost:5173/api/shorturl/current", {
           withCredentials: true,
         });
         setUser(res.data.user);
@@ -27,7 +27,7 @@ const Navbar = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.post("https://url-shortner-zc4s.onrender.com/api/shorturl/logout", {}, {
+      await axios.post("http://localhost:5173/api/shorturl/logout", {}, {
         withCredentials: true,
       });
       setUser(null);

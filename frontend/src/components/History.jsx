@@ -12,7 +12,7 @@ const History = () => {
   useEffect(() => {
     const fetchUrl = async () => {
       try {
-        await axios.get("https://url-shortner-zc4s.onrender.com/api/shorturl", { withCredentials: true })
+        await axios.get("http://localhost:5173/api/shorturl", { withCredentials: true })
           .then((res) => {
             setData(res.data.urls)
             // console.log(res.data.urls)
@@ -60,12 +60,12 @@ const History = () => {
               </td>
               <td className="px-4 sm:px-6 py-4 break-all">
                 <a
-                  href={`https://url-shortner-zc4s.onrender.com/s/${url.shortId}`}
+                  href={`http://localhost:5173/s/${url.shortId}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-600 hover:underline"
                 >
-                  https://url-shortner-zc4s.onrender.com/s/{url.shortId}
+                  http://localhost:5173/s/{url.shortId}
                 </a>
               </td>
               <td className="px-4 sm:px-6 py-4 text-center font-semibold text-indigo-700">
